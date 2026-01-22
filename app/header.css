@@ -1,0 +1,694 @@
+/* header.css */
+
+/* Header стили */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    z-index: 1002;
+    height: 100px;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Навигационные ссылки для десктопа */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.TextNav {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.TextNav:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.TextNav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.TextNav:hover::after {
+    width: 60%;
+}
+
+/* Бургер меню для мобильных */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 12px;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.burger-menu:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.burger-line {
+    width: 25px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 350px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    padding: 100px 25px 40px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    overflow-y: auto;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-nav-links .TextNav {
+    font-size: 18px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-links .TextNav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+
+.nav-icon {
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+/* Контактная информация в мобильном меню */
+.mobile-contact-info {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.mobile-phone:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+    text-decoration: none;
+}
+
+.phone-icon {
+    font-size: 22px;
+}
+
+.mobile-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-social-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.mobile-social-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+    text-decoration: none;
+}
+
+.mobile-social-btn img {
+    border-radius: 6px;
+}
+
+/* Оверлей для меню */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 998;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Футер стили */
+.footer {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    margin-top: auto;
+    backdrop-filter: blur(10px);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Логотип в футере */
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.footer-tagline {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.footer-phone:hover {
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+.footer-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.contact-icon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Ссылки в футере */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.footer-links a::before {
+    content: '→';
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Социальные кнопки в футере */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-btn.telegram {
+    background: rgba(0, 136, 204, 0.2);
+    color: #0088cc;
+    border-color: rgba(0, 136, 204, 0.3);
+}
+
+.social-btn.vk {
+    background: rgba(76, 117, 163, 0.2);
+    color: #4c75a3;
+    border-color: rgba(76, 117, 163, 0.3);
+}
+
+.social-btn.location {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-btn.telegram:hover {
+    background: rgba(0, 136, 204, 0.3);
+}
+
+.social-btn.vk:hover {
+    background: rgba(76, 117, 163, 0.3);
+}
+
+.social-btn.location:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.location-icon {
+    font-size: 18px;
+}
+
+/* Кнопка заказа в футере */
+.footer-cta {
+    margin-top: 20px;
+}
+
+.footer-order-btn {
+    display: block;
+    background: rgba(102, 126, 234, 0.8);
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-order-btn:hover {
+    background: rgba(102, 126, 234, 1);
+    transform: translateY(-3px);
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ====================== */
+/* АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ */
+/* ====================== */
+@media (max-width: 1024px) {
+    nav {
+        padding: 12px 15px;
+        min-height: 70px;
+    }
+    
+    .logo-container .logo {
+        width: 160px;
+        height: auto;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .TextNav {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .footer-container {
+        padding: 40px 15px 25px;
+    }
+}
+
+/* ====================== */
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+/* ====================== */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 15px;
+        min-height: 60px;
+    }
+    
+    .logo-container .logo {
+        width: 140px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .burger-menu {
+        display: flex;
+    }
+    
+    .mobile-menu {
+        width: 80%;
+        padding: 90px 20px 30px;
+    }
+    
+    .mobile-nav-links .TextNav {
+        font-size: 16px;
+        padding: 18px;
+    }
+    
+    .mobile-phone {
+        font-size: 16px;
+        padding: 14px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-section h4 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-tagline {
+        font-size: 14px;
+    }
+    
+    .footer-contact {
+        gap: 10px;
+    }
+    
+    .footer-phone,
+    .footer-email {
+        font-size: 14px;
+    }
+    
+    .footer-links a {
+        font-size: 14px;
+    }
+    
+    .social-btn {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .footer-order-btn {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+/* ============================ */
+/* АДАПТАЦИЯ ДЛЯ МАЛЕНЬКИХ ТЕЛЕФОНОВ */
+/* ============================ */
+@media (max-width: 480px) {
+    nav {
+        padding: 8px 10px;
+    }
+    
+    .logo-container .logo {
+        width: 120px;
+    }
+    
+    .mobile-menu {
+        width: 85%;
+        padding: 80px 15px 25px;
+    }
+    
+    .mobile-nav-links .TextNav {
+        font-size: 15px;
+        padding: 16px;
+    }
+    
+    .mobile-phone {
+        font-size: 15px;
+    }
+    
+    .mobile-social-btn {
+        padding: 14px;
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        padding: 30px 10px 20px;
+    }
+    
+    .footer-content {
+        gap: 25px;
+    }
+    
+    .footer-tagline {
+        font-size: 13px;
+    }
+    
+    .footer-copyright p {
+        font-size: 12px;
+    }
+    
+    .footer-legal a {
+        font-size: 12px;
+    }
+}
+
+/* ============================== */
+/* ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (360px) */
+/* ============================== */
+@media (max-width: 360px) {
+    .logo-container .logo {
+        width: 100px;
+    }
+    
+    .mobile-menu {
+        width: 90%;
+    }
+    
+    .mobile-nav-links .TextNav {
+        font-size: 14px;
+        padding: 14px;
+    }
+}

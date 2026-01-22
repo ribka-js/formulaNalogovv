@@ -1,0 +1,315 @@
+/* Стили для страницы "О мне" */
+.about-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Герой-секция */
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  background: linear-gradient(45deg, #84c1ff, #bce4ff); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #dcf1ff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 5px solid white;
+}
+
+/* Достижения */
+.achievements-section {
+  margin-bottom: 60px;
+}
+
+.achievements-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #dcf1ff;
+  font-size: 32px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(52, 152, 219, 0.4);
+}
+
+.achievement-number {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.achievement-text {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* Услуги */
+.services-section {
+  margin-bottom: 60px;
+}
+
+.services-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #dcf1ff;
+  font-size: 32px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #3498db;
+  box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+}
+
+.service-icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #b7e2ff;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.service-card p {
+  color: #ffffff;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+/* Образование */
+.education-section {
+  margin-bottom: 60px;
+}
+
+.education-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #dcf1ff;
+  font-size: 32px;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #2756ae;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.education-item h3 {
+  color: #b7e2ff;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.education-item p {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* CTA секция */
+.cta-section {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.3);
+}
+
+.cta-content h2 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 32px;
+  -webkit-text-fill-color: white;
+  background: none;
+}
+
+.cta-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-button {
+text-decoration: none;
+  display: inline-block;
+  background: white;
+  color: #3498db;
+  padding: 18px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  background: #60a7ee;
+  text-decoration: none;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .about-hero {
+    gap: 30px;
+    padding: 30px;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .profile-photo {
+    width: 300px;
+    height: 375px;
+  }
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 25px;
+  }
+  
+  .hero-content h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  .profile-photo {
+    width: 250px;
+    height: 313px;
+  }
+  
+  .achievements-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-section {
+    padding: 40px 25px;
+  }
+  
+  .cta-content h2 {
+    font-size: 28px;
+  }
+  
+  .cta-button {
+    padding: 15px 25px;
+    font-size: 16px;
+  }
+}
+
+/* Адаптация для маленьких телефонов */
+@media (max-width: 480px) {
+  .about-main {
+    padding: 20px 10px;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .achievement-card,
+  .service-card,
+  .education-item {
+    padding: 20px;
+  }
+  
+  .cta-section {
+    padding: 30px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 24px;
+  }
+}

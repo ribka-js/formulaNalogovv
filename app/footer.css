@@ -1,0 +1,82 @@
+/* Стили для подвала */
+.footer {
+    background: #0a0a0a;
+    color: #808080;
+    border-top: 1px solid #404040;
+    width: 100%;
+    margin-top: auto;
+    backdrop-filter: blur(10px);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 20px;
+}
+
+.footer-section h4 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-logo img {
+    filter: brightness(0.8) invert(0.9);
+}
+
+.footer-tagline {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #808080;
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #b0b0b0;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #808080;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+/* Социальные кнопки */
+.social-btn {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid #404040;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.social-btn.telegram:hover {
+    background: rgba(40, 40, 40, 0.9);
+    border-color: #606060;
+    text-decoration: none;
+}
+
+.social-btn.vk:hover {
+    background: rgba(40, 40, 40, 0.9);
+    border-color: #606060;
+    text-decoration: none;
+}
+
+.social-btn.location:hover {
+    background: rgba(40, 40, 40, 0.9);
+    border-color: #606060;
+    text-decoration: none;
+}
